@@ -1,23 +1,29 @@
-const Navbar = () =>{
+const Navbar = () => {
 
-const handleNav = (ev, page) => {
-    ev.preventDefault(); // Stop default navigation behavior
-    console.log(`The ${page} link was clicked.`);
-    // You can add logic here to update the parent component or perform other actions
-};
+    const handleNav = (ev, page) => {
+        ev.preventDefault();
+        console.log(`The ${page} link was clicked.`);
+        // Additional logic here if needed
+    };
 
-    return(
- <div>
+    // Array with capitalized link names
+    const links = ['Welcome', 'Staff', 'Students', 'Courses'];
+
+    return (
+        <div>
             <nav>
-                <menu>
-                    <li><a href="#" onClick={(ev) => handleNav(ev, 'home')}>Home</a></li>
-                    <li><a href="#" onClick={(ev) => handleNav(ev, 'staff')}>Staff</a></li>
-                    <li><a href="#" onClick={(ev) => handleNav(ev, 'students')}>Students</a></li>
-                    <li><a href="#" onClick={(ev) => handleNav(ev, 'courses')}>Courses</a></li>
-                </menu>
+                <ul>
+                    {links.map((link) => (
+                        <li key={link}>
+                            <a href="#" onClick={(ev) => handleNav(ev, link)}>
+                                {link}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </nav>
         </div>
-    )
-}
+    );
+};
 
 export default Navbar;
