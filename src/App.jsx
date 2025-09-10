@@ -38,7 +38,8 @@ const renderComponent = () =>{
   return (
      <>
     <Navbar handleNav={handleNav} />
-    <Banner/>
+    <Banner message="Message 1" />
+    <Banner message="Message 2" />
     <main>
       {renderComponent()}
     </main>
