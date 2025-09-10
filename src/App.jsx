@@ -10,11 +10,13 @@ import Footer from './Components/Footer';
 const App = () => {
 
   return (
-    <>
-      <Welcome></Welcome>
-      <Students></Students>
-      <Staff></Staff>
-      <Courses></Courses>
+     <>
+    <Navbar />
+    <Banner/>
+    <main>
+    <Welcome />
+    </main>
+    <Footer />
     </>
   )
 }
