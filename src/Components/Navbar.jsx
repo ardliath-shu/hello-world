@@ -1,13 +1,6 @@
-const Navbar = () => {
+const Navbar = ({ handleNav }) => {
 
-    const handleNav = (ev, page) => {
-        ev.preventDefault();
-        console.log(`The ${page} link was clicked.`);
-        // Additional logic here if needed
-    };
-
-    // Array with capitalized link names
-    const links = ['Welcome', 'Staff', 'Students', 'Courses'];
+ const links = ['Welcome', 'Staff', 'Students', 'Courses'];
 
     return (
         <div>
@@ -25,5 +18,6 @@ const Navbar = () => {
         </div>
     );
 };
+
 
 export default Navbar;

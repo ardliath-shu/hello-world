@@ -1,9 +1,9 @@
-const Welcome = () =>{
-    return(
-        <div>
-            <h2>Welcome</h2>
-        </div>
-    )
-}
+const Welcome = (props) => {
+   return (
+      <div>
+         <h2>{props.msg}</h2>
+      </div>
+   );
+};
 
 export default Welcome;
